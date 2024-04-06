@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ДР Арины</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ДР Арины</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__content">
+				<div class="header__links">
+					<a href="index.html" class="header__link">Стефания</a>
+					<a href="#" class="header__link">Арина</a>
+					<a href="index3.html" class="header__link">Трофим</a>
+					<a href="index4.html" class="header__link">Алла</a>
+					<a href="index5.html" class="header__link">Денис</a>
+					<a href="index6.html" class="header__link">Марк</a>
+				</div>
+			</div>
+		</header>
+		<!-- countdown-wrapper -->
+		<div class="countdown-wrapper">
+			<h1 class="title">до Дня Рождения Арины осталось:</h1>
+			<div class="line"></div>
+			<div id="year" class="year"></div>
+			<div class="countdown" id="countdown">
+				<div class="time">
+					<h2 id="days"></h2>
+					<small>дней</small>
+				</div>
+				<div class="time">
+					<h2 id="hours"></h2>
+					<small>часов</small>
+				</div>
+				<div class="time">
+					<h2 id="minutes"></h2>
+					<small>минут</small>
+				</div>
+				<div class="time">
+					<h2 id="seconds"></h2>
+					<small>секунд</small>
+				</div>
+			</div>
+			<div class="preloader" id="preloader">
+				<div class="lds-ripple">
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+		<!-- // countdown-wrapper -->
 
-    <header class="header">
-        <div class="header__content">
-            <div class="header__links">
-                <a href="index.html" class="header__link">Стефания</a>
-                <a href="#" class="header__link">Арина</a>
-                <a href="index3.html" class="header__link">Трофим</a>
-                <a href="index4.html" class="header__link">Алла</a>
-                <a href="index5.html" class="header__link">Денис</a>
-                <a href="index6.html" class="header__link">Марк</a>
-
-            </div>
-        </div>
-    </header>
-    <!-- countdown-wrapper -->
-    <div class="countdown-wrapper">
-        <h1 class="title">до Дня Рождения Арины осталось:</h1>
-        <div id="year" class="year"></div>
-        <div class="countdown" id=countdown>
-            <div class="time">
-                <h2 id="days"></h2>
-                <small>дней</small>
-            </div>
-            <div class="time">
-                <h2 id="hours"></h2>
-                <small>часов</small>
-            </div>
-            <div class="time">
-                <h2 id="minutes"></h2>
-                <small>минут</small>
-            </div>
-            <div class="time">
-                <h2 id="seconds"></h2>
-                <small>секунд</small>
-            </div>
-        </div>
-        <div class="preloader" id="preloader">
-            <div class="lds-ripple"><div></div><div></div></div>
-        </div>
-    </div>
-    <!-- // countdown-wrapper -->
-
-    <script src="./js/main2.js"></script>
-</body>
+		<script src="./js/main2.js"></script>
+	</body>
 </html>

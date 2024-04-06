@@ -82,7 +82,7 @@ body::after {
 	background: #fdd1ff21;
 	backdrop-filter: blur(10px);
 	border-radius: 25px;
-	z-index: 1;
+	z-index: 0;
 }
 
 .time {

@@ -3,6 +3,8 @@ const days = document.querySelector('#days');
 const hours = document.querySelector('#hours');
 const minutes = document.querySelector('#minutes');
 const seconds = document.querySelector('#seconds');
+const countdown = document.querySelector('#countdown')
+const preloader = document.querySelector('#preloader')
 
 const currentYear = new Date().getFullYear();
 const nextYear = new Date(`June 08 ${currentYear} 00:00:00`);
@@ -26,3 +28,8 @@ function updateCounter() {
 updateCounter();
 
 setInterval(updateCounter, 1000);
+
+setTimeout(function () {
+    preloader.remove();
+    countdown.style.display = 'flex';
+}, 1000);

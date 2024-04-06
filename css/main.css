@@ -62,7 +62,17 @@ body::after {
 	font-size: 60px;
 	margin: 0 0 20px;
 }
-
+.line {
+	margin: 0 auto;
+	background-color: #ffffff55;
+	height: 3px;
+	width: 300px;
+}
+@media (max-width: 364px) {
+	.line {
+		margin-bottom: 20px;
+	}
+}
 .year {
 	position: absolute;
 	top: 180%;
@@ -79,8 +89,6 @@ body::after {
 	display: none;
 	align-items: center;
 	justify-content: center;
-	background: #fdd1ff21;
-	backdrop-filter: blur(10px);
 	border-radius: 25px;
 	z-index: 0;
 }

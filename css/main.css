@@ -123,6 +123,25 @@ body::after {
 		font-size: 16px;
 	}
 }
+@media (max-width: 700px){
+	.header__links{
+		display: block;
+		gap: 50px;
+		position: relative;
+		font-size: 25px;
+		z-index: 1;	
+	}
+	.header__link{
+		z-index: 1;
+		border-radius: 10px;
+		padding: 10px;
+		color: #fff;
+		text-decoration: none;
+	}
+	.header__link:hover{
+		text-decoration: underline;
+	}
+}
 /* Preloader */
 
 .lds-ripple {

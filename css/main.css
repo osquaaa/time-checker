@@ -80,8 +80,9 @@ body::after {
 	align-items: center;
 	justify-content: center;
 	background: #fdd1ff21;
-	backdrop-filter: blur(70px);
+	backdrop-filter: blur(10px);
 	border-radius: 25px;
+	z-index: 1;
 }
 
 .time {

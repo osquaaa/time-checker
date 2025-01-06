@@ -7,7 +7,7 @@ const countdown = document.querySelector('#countdown')
 const preloader = document.querySelector('#preloader')
 
 const currentYear = new Date().getFullYear();
-const nextYear = new Date(`May 05 ${currentYear} 00:00:00`);
+const nextYear = new Date(`May 05 ${currentYear + 1} 00:00:00`);
 
 year.innerText = currentYear;
 

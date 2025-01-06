@@ -5,6 +5,8 @@ const minutes = document.querySelector('#minutes')
 const seconds = document.querySelector('#seconds')
 const countdown = document.querySelector('#countdown')
 const preloader = document.querySelector('#preloader')
+const title = document.querySelector('.title')
+const line = document.querySelector('.line') // Находим элемент .line
 
 // Дата дня рождения (7 января)
 function getNextBirthday() {
@@ -24,12 +26,23 @@ year.innerText = nextBirthday.getFullYear()
 
 function updateCounter() {
 	const currentTime = new Date()
-	const diff = nextBirthday - currentTime
+	let diff = nextBirthday - currentTime
 
-	// Если день рождения наступил, обновляем на следующий год
-	if (diff <= 0) {
+	// Если наступил день рождения
+	if (diff <= 0 && diff > -3600000) {
+		// 1 час после дня рождения
+		showBirthdayGreeting()
+		return
+	}
+
+	// Если час поздравления прошёл
+	if (diff <= -3600000) {
 		nextBirthday = getNextBirthday()
 		year.innerText = nextBirthday.getFullYear()
+		diff = nextBirthday - currentTime
+		countdown.style.display = 'flex'
+		title.innerText = 'до Дня Рождения Стефании осталось:'
+		line.style.display = 'block' // Показать линию
 	}
 
 	const daysLeft = Math.floor(diff / 1000 / 60 / 60 / 24)
@@ -43,6 +56,14 @@ function updateCounter() {
 	seconds.innerText = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft
 }
 
+// Функция для отображения поздравления
+function showBirthdayGreeting() {
+	countdown.style.display = 'none'
+	title.innerText = '🎉 С Днём Рождения, Стефания! 🎂🎁'
+	line.style.display = 'none' // Скрыть линию
+}
+
+// Инициализация
 updateCounter()
 setInterval(updateCounter, 1000)
 
